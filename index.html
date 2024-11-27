@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-style: oblique;
+            border: 1px solid;
+
+        }
+        .container{
+            color: burlywood;
+            border-radius: 2px;
+    
+        }
+        button{
+            color: cornflowerblue;
+            border: 1px solid #1212;
+            font-size: 16px;
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <label class="Num1">
+        value1:<input type="Number" id="Num1">
+    </label>
+    <br>
+    <label class="Num2">
+        value2:<input type="Number" id="Num2">
+    </label>
+    <br>
+    <button onclick="sum()">plus</button>
+    <br>
+    <button onclick="minus()">minus</button>
+ <br>
+    <button onclick="multiply()">multiply</button>
+    <br> 
+    <button onclick="divide()">divide</button> 
+    <div id="container"></div>
+
+<script>
+    function sum(){
+    let Num1 = Number(document.getElementById("Num1").value)
+    let Num2 = Number(document.getElementById("Num2").value)
+
+    console.log("Num1,Num2")
+    document.getElementById("container").innerText = Num1 + Num2;
+}
+    function minus(){
+    let Num1=(document.getElementById("Num1").value)
+    let Num2=(document.getElementById("Num2").value)
+    console.log("Num1,Num2")
+    document.getElementById("container").innerText = Num1 - Num2;
+
+}
+
+function multiply(){
+    let Num1 = (document.getElementById("Num1").value)
+    let Num2 = (document.getElementById("Num2").value)
+    console.log("Num1,Num2")
+    document.getElementById("container").innerText = Num1 * Num2
+}
+
+function divide(){
+    let Num1 = Number(document.getElementById("Num1").value)
+    let Num2 = Number(document.getElementById("Num2").value)
+    console.log("Num1,Num2")
+    document.getElementById("container").innerText = Num1 / Num2
+}
+</script>
+    
+    
+</body>
+</html>
